@@ -11,7 +11,12 @@
     if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
         window.location.href="https://www.pgyer.com/NErM"
     } else if (/(Android)/i.test(navigator.userAgent)) {
-        window.location.href="http://renedescartes.io/dke.apk"
+            var ua = navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i)=="micromessenger") {
+                alert("请在浏览器中打开链接")
+            } else {
+                window.location.href="http://renedescartes.io/dke.apk"
+            }
     } else {
        alert("不支持PC端下载")
     }
